@@ -7,8 +7,8 @@ export default function Home() {
     }
   return (
     <main className="inline-block w-full">
-      <div className="w-40 border-r-indigo-800 border-solid border-2 h-screen fixed " ></div>
-      <div className=" min-w-fit  grid min-h-screen grid-cols-3 gap-8 items-center justify-between p-10 ml-40">
+      
+      <div className=" min-w-fit  grid md:min-h-screen h-fit grid-cols-1 md:grid-cols-3  gap-8 md:gap-10 justify-between p-10 ">
       <TaskList title="TODO"></TaskList>
       <TaskList title="DOING"></TaskList>
       <TaskList title="DONE"></TaskList>

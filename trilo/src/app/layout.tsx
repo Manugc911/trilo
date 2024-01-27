@@ -16,13 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + " min-h-svh"}>
         <header className="flex justify-center mt-3">
         <h1 className="text-4xl tracking-widest">Trilo</h1>
         </header>
         {children}
         <footer>
-          My footer
+          
         </footer>
         </body>
     </html>
