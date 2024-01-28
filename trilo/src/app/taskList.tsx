@@ -79,6 +79,7 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
     let mynewtick = new ValueTick(text, false, null);
     if (mynewtick.text != "") {
       addTicks([...ticks, mynewtick]);
+      
     }
   }
 
