@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  'use client'
   return (
     <html lang="en">
       <body className={inter.className + " min-h-svh"}>
@@ -28,7 +30,7 @@ export default function RootLayout({
     </div>
         {children}
         <footer>
-          
+          <button onClick={()=>{localStorage.clear()}}>CLEAR</button>
         </footer>
         </body>
     </html>
