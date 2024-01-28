@@ -20,7 +20,7 @@ export default function RootLayout({
         <header className="flex justify-center mt-3">
         <h1 className="text-4xl tracking-widest">Trilo</h1>
         </header>
-        <div className="bg-animation">
+        <div className="bg-animation -z-10">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>

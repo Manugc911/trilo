@@ -25,7 +25,7 @@ class ValueTick {
 }
 
 export default function TaskList(Props: { title: string, content?: Array<ValueTick> }) {
- 
+
   const { title = "Empty Title", content } = Props;
 
   const [ticks, addTicks] = useState([]);
@@ -34,7 +34,7 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
     console.log("read " + title)
     readLocalStorage(ticks, addTicks);
   }, []);
-  
+
   useEffect(() => {
     console.log("write" + title)
     localStorage.setItem('ticks' + title, JSON.stringify(ticks));
@@ -43,14 +43,14 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
   let colorBorder = "";
   switch (title) {
     case "TODO":
-      
-      colorBorder= "border-green-400 shadow-green-400 ";
+
+      colorBorder = "border-green-400 shadow-green-400 ";
       break;
     case "DOING":
-      colorBorder= "border-cyan-400 shadow-cyan-400 ";
+      colorBorder = "border-cyan-400 shadow-cyan-400 ";
       break;
     case "DONE":
-      colorBorder= "border-red-400 shadow-red-400 ";
+      colorBorder = "border-red-400 shadow-red-400 ";
       break;
 
   }
@@ -69,7 +69,7 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
 
         valueTickArray = [...valueTickArray, valueTick]
       });
-      
+
       addTicks([...ticks, ...valueTickArray]);
     }
 
@@ -77,8 +77,9 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
 
   const addNewTick = (text) => {
     let mynewtick = new ValueTick(text, false, null);
-    addTicks([...ticks, mynewtick]);
-
+    if (mynewtick.text != "") {
+      addTicks([...ticks, mynewtick]);
+    }
   }
 
   const removeTick = (index: number) => {
