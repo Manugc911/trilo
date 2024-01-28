@@ -8,7 +8,7 @@ export default function Tick(props:{text:String,idkey:string,identifier:string,c
         event.dataTransfer.setData("checked",String(checked));
     }
     return(
-        <div id={identifier} data-idkey={idkey} draggable={true} onDragStart={drag} onDragEnd={dragEnd} onClick={handleClick} className="mb-2" >
+        <div id={identifier} data-idkey={idkey} draggable={true} onDragStart={drag} onDragEnd={dragEnd} onClick={handleClick} className="mb-2 touch-none" >
             <span className={"font-bold text-lg "+(checked?"text-green-600":"text-red-700")}>{checked?"X":"O"}</span>
             <span> | {text}</span>
         </div>
