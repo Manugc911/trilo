@@ -114,7 +114,7 @@ export default function TaskList(Props: { title: string, content?: Array<ValueTi
   }
 
   return (
-    <section onDrop={drop} onDragOver={allowDrop} className={colorBorder + " touch-none h-full  justify-between rounded-lg p-6 border-solid border-2 shadow-lg shadow-black"}>
+    <section onDrop={drop} onDragOver={allowDrop} className={colorBorder + " touch-manipulation h-full  justify-between rounded-lg p-6 border-solid border-2 shadow-lg shadow-black"}>
       <div className="w-full">
         <h2 className="text-center font-bold text-lg mb-4">{title}</h2>
       </div>
